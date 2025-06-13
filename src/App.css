@@ -1,5 +1,3 @@
-/* src/App.css */
-
 body {
     margin: 0;
     padding: 0;
@@ -65,7 +63,6 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* Remove gap here, we'll use margin on the li and ::after */
     padding: 0 1rem;
     list-style: none;
     margin: 0;
@@ -81,32 +78,28 @@ body {
     font-size: 0.875rem;
     font-weight: 500;
     white-space: nowrap;
-    /* Add margin-right to create space AND make room for the arrow */
-    margin-right: 1.5rem; /* Adjust as needed for spacing */
-    position: relative; /* Needed for absolute positioning of ::after */
+    margin-right: 1.5rem;
+    position: relative;
 }
 
-/* Remove margin-right for the last step */
 .progress-tracker ul li:last-child {
     margin-right: 0;
 }
 
-/* Arrow using ::after pseudo-element */
 .progress-step::after {
     content: '';
     position: absolute;
-    right: -1.25rem; /* Position the arrow outside the step, adjust as needed */
+    right: -1.25rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 0.75rem; /* Width of the arrow */
-    height: 0.75rem; /* Height of the arrow */
-    border-top: 2px solid #4a5568; /* Arrow color */
-    border-right: 2px solid #4a5568; /* Arrow color */
-    transform: translateY(-50%) rotate(45deg); /* Rotate to make it an arrow shape */
+    width: 0.75rem;
+    height: 0.75rem;
+    border-top: 2px solid #4a5568;
+    border-right: 2px solid #4a5568;
+    transform: translateY(-50%) rotate(45deg);
     transition: border-color 0.2s ease;
 }
 
-/* Hide arrow for the last step */
 .progress-tracker ul li:last-child::after {
     display: none;
 }
@@ -128,7 +121,7 @@ body {
 }
 
 .progress-step.active::after {
-    border-color: #818cf8; /* Change arrow color when active */
+    border-color: #818cf8;
 }
 
 
@@ -173,10 +166,10 @@ body {
     .progress-step {
         font-size: 1rem;
         padding: 0.75rem 1rem;
-        margin-right: 2.5rem; /* Larger margin for larger screens */
+        margin-right: 2.5rem;
     }
     .progress-step::after {
-        right: -1.75rem; /* Adjust arrow position for larger screens */
+        right: -1.75rem;
     }
     .progress-step .step-icon {
         width: 1.5rem;
