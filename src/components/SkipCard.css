@@ -1,34 +1,32 @@
-/* src/components/SkipCard.css */
-
 .skip-card {
-    background-color: #2d3748; 
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     transform: scale(1);
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    border: 1px solid #4a5568; /* border-gray-700 */
+    border: 1px solid #4a5568;
 }
 
 .skip-card:hover {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15); /* hover:shadow-xl */
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
     transform: scale(1.01);
 }
 
 .skip-card.selected {
-    border-color: #6366f1; /* border-indigo-500 */
-    box-shadow: 0 0 0 2px #4338ca, 0 10px 15px rgba(0, 0, 0, 0.1); /* ring-2 ring-indigo-700 */
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px #4338ca, 0 10px 15px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
 }
 
 .skip-card-image-container {
     position: relative;
     width: 100%;
-    height: 12rem; /* h-48 */
-    background-color: #4a5568; /* bg-gray-700 */
+    height: 12rem;
+    background-color: #4a5568;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     overflow: hidden;
@@ -36,9 +34,9 @@
     align-items: center;
     justify-content: center;
 }
-@media (min-width: 640px) { /* sm */
+@media (min-width: 640px) {
     .skip-card-image-container {
-        height: 14rem; /* sm:h-56 */
+        height: 14rem;
     }
 }
 .skip-card-image {
@@ -51,16 +49,16 @@
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    background-color: #2563eb; /* bg-blue-600 */
+    background-color: #2563eb;
     color: #fff;
-    font-size: 0.75rem; /* text-xs */
+    font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.75rem;
-    border-radius: 9999px; /* rounded-full */
+    border-radius: 9999px;
 }
-@media (min-width: 640px) { /* sm */
+@media (min-width: 640px) {
     .skip-yards-label {
-        font-size: 0.875rem; /* sm:text-sm */
+        font-size: 0.875rem;
     }
 }
 
@@ -68,7 +66,7 @@
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
-    background-color: #3b82f6; /* bg-blue-500 */
+    background-color: #3b82f6;
     color: #fff;
     border-radius: 9999px;
     padding: 0.5rem;
@@ -88,18 +86,18 @@
     flex-grow: 1;
 }
 .skip-name {
-    font-size: 1.25rem; /* text-xl */
+    font-size: 1.25rem;
     font-weight: 600;
     color: #fff;
     margin-bottom: 0.5rem;
 }
-@media (min-width: 640px) { /* sm */
+@media (min-width: 640px) {
     .skip-name {
-        font-size: 1.5rem; /* sm:text-2xl */
+        font-size: 1.5rem;
     }
 }
 .skip-description {
-    color: #9ca3af; /* text-gray-400 */
+    color: #9ca3af;
     margin-bottom: 0.75rem;
     font-size: 0.875rem;
     flex-grow: 1;
@@ -111,12 +109,12 @@
     justify-content: space-between;
     margin-top: auto;
     padding-top: 0.75rem;
-    border-top: 1px solid #4a5568; /* border-t border-gray-700 */
+    border-top: 1px solid #4a5568;
 }
 .skip-price {
-    font-size: 1.5rem; /* text-2xl */
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #fcd34d; /* text-yellow-300 */
+    color: #fcd34d;
 }
 
 .select-skip-button {
@@ -130,16 +128,15 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     border: none;
-    /* Default gradient */
-    background-image: linear-gradient(to right, #fbbf24, #1d4ed8); /* from-yellow-400 to-blue-700 */
+    background-image: linear-gradient(to right, #fbbf24, #1d4ed8);
 }
 
 .select-skip-button:hover:not(.selected-button) {
-    background-image: linear-gradient(to right, #fde047, #2563eb); /* hover:from-yellow-300 hover:to-blue-600 */
+    background-image: linear-gradient(to right, #fde047, #2563eb);
 }
 
 .select-skip-button.selected-button {
-    background-image: linear-gradient(to right, #facc15, #3b82f6); /* from-yellow-500 to-blue-600 */
+    background-image: linear-gradient(to right, #facc15, #3b82f6);
 }
 
 .select-skip-button:active {
