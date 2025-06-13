@@ -1,6 +1,6 @@
 // src/components/SummaryFooter.jsx
 import React from 'react';
-import './SummaryFooter.css'; // Ensure this CSS file is used
+import './SummaryFooter.css';
 
 /**
  * A persistent summary footer that appears when a skip is selected.
