@@ -1,12 +1,12 @@
-// src/App.jsx
+
 import React, { useState, useEffect } from 'react';
 import { fetchSkips } from './api/skipService';
 import SkipCard from './components/SkipCard';
 import SummaryFooter from './components/SummaryFooter';
-import './App.css'; // Your main application styles
+import './App.css'; 
 
-// Import Lucide icons
-import { MapPin, Box, CheckCircle, Calendar, CreditCard } from 'lucide-react';
+
+import { MapPin, Box, CheckCircle, Calendar, CreditCard, Shield } from 'lucide-react';
 
 function App() {
     const [skips, setSkips] = useState([]);
@@ -14,7 +14,7 @@ function App() {
     const [error, setError] = useState(null);
     const [selectedSkip, setSelectedSkip] = useState(null);
     const [activeStep, setActiveStep] = useState('Select Skip');
-    // Added showSummaryFooter state to control footer visibility
+   
     const [showSummaryFooter, setShowSummaryFooter] = useState(false);
 
     useEffect(() => {
@@ -48,8 +48,6 @@ function App() {
     const handleContinue = () => {
         if (selectedSkip) {
             console.log("Continue with selected skip:", selectedSkip);
-            // Here you would typically navigate to the next step or confirm order
-            // For now, let's keep a simple alert (can be replaced with a modal later)
             alert(`Proceeding with ${selectedSkip.name} for £${selectedSkip.price}.`);
         } else {
             console.warn("Continue clicked, but no skip selected.");
@@ -72,12 +70,12 @@ function App() {
         );
     }
 
-    // Define your progress steps with associated Lucide icons
+
     const progressSteps = [
         { name: 'Postcode', icon: MapPin },
         { name: 'Waste Type', icon: Box },
         { name: 'Select Skip', icon: CheckCircle },
-        { name: 'Permit Check', icon: Calendar }, // Using Calendar for permit check for now
+        { name: 'Permit Check', icon: Shield },
         { name: 'Choose Date', icon: Calendar },
         { name: 'Payment', icon: CreditCard },
     ];
@@ -128,9 +126,9 @@ function App() {
 
             <SummaryFooter
                 selectedSkip={selectedSkip}
-                isOpen={showSummaryFooter} // Pass the new state to control visibility
-                onBack={handleBack} // Pass the back handler
-                onContinue={handleContinue} // Pass the continue handler
+                isOpen={showSummaryFooter}
+                onBack={handleBack} 
+                onContinue={handleContinue} 
             />
         </div>
     );
