@@ -1,118 +1,109 @@
-/* src/components/SummaryFooter.css */
-
 .summary-footer {
     position: fixed;
-    bottom: 0; /* Position at the bottom */
+    bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #1a202c; /* Dark background, similar to your theme */
+    background-color: #1a202c;
     color: #fff;
-    padding: 1rem 1.5rem; /* Adjust padding as needed */
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); /* Shadow on top */
-    z-index: 900; /* Below modals, above main content */
-    transform: translateY(100%); /* Start off-screen below */
-    transition: transform 0.5s ease-out; /* Smooth slide-in/out */
-    border-top: 1px solid #4a5568; /* Subtle top border for definition */
+    padding: 1rem 1.5rem;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 900;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
+    border-top: 1px solid #4a5568;
 }
 
 .summary-footer.show {
-    transform: translateY(0); /* Slide into view */
+    transform: translateY(0);
 }
 
 .summary-footer-content {
-    max-width: 1200px; /* Max width for content, center it */
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Default stack on small screens */
-    align-items: center; /* Center items when stacked */
-    gap: 1.5rem; /* Space between sections when stacked */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-@media (min-width: 768px) { /* Medium screens and up (tablet/desktop) */
+@media (min-width: 768px) {
     .summary-footer-content {
-        flex-direction: row; /* Row layout on larger screens */
-        justify-content: space-between; /* Distribute items */
-        align-items: center; /* Vertically align items */
-        gap: 1rem; /* Adjust gap for row layout */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
     }
 }
 
-/* Disclaimer Text Styling */
 .footer-disclaimer {
-    color: #a0aec0; /* Lighter grey for disclaimer text */
-    font-size: 0.75rem; /* Smaller font size */
-    text-align: center; /* Center text on small screens */
-    flex-shrink: 0; /* Don't allow it to shrink too much */
-    max-width: 400px; /* Limit width of disclaimer */
+    color: #a0aec0;
+    font-size: 0.75rem;
+    text-align: center;
+    flex-shrink: 0;
+    max-width: 400px;
 }
 
 @media (min-width: 768px) {
     .footer-disclaimer {
-        text-align: left; /* Align left on larger screens */
-        flex-basis: 40%; /* Give it more space on the left */
-        max-width: none; /* Remove max-width on larger screens */
+        text-align: left;
+        flex-basis: 40%;
+        max-width: none;
     }
 }
 
-/* Selected Skip Info Styling */
 .skip-summary-info {
     display: flex;
-    flex-direction: column; /* Stack name and (price + hire) vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
     .skip-summary-info {
-        /* On larger screens, this will remain column to keep the two lines */
         flex-direction: column;
-        align-items: flex-start; /* Align text left */
+        align-items: flex-start;
         text-align: left;
-        gap: 0.2rem; /* Small gap between the two lines */
-        flex-basis: auto; /* Allow content to dictate size */
+        gap: 0.2rem;
+        flex-basis: auto;
     }
 }
 
 .selected-skip-name {
-    font-size: 1rem; /* Default font size for name */
+    font-size: 1rem;
     font-weight: 500;
     color: #fff;
-    white-space: nowrap; /* Keep name on one line */
-    margin-bottom: 0; /* Remove default paragraph margin */
+    white-space: nowrap;
+    margin-bottom: 0;
 }
 
 .selected-skip-price-and-hire {
-    font-size: 0.875rem; /* Default for the combined line, then span overrides */
-    color: #9ca3af; /* Default color for this line, will be overridden by price span */
-    white-space: nowrap; /* Keep price and hire period on one line */
-    margin-top: 0; /* Remove default paragraph margin */
+    font-size: 0.875rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    margin-top: 0;
 }
 
 .selected-skip-price {
-    font-size: 1.25rem; /* Larger font for price */
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #fcd34d; /* Yellow color for price */
-    margin-right: 0.25rem; /* Small space between price and hire period */
+    color: #fcd34d;
+    margin-right: 0.25rem;
 }
 
-/* No specific .selected-skip-hire-period style needed if it's within .selected-skip-price-and-hire and inherits/is fine */
-
-
-/* Actions (Buttons) Styling */
 .summary-footer-actions {
     display: flex;
-    gap: 1rem; /* Space between buttons */
-    width: 100%; /* Take full width on small screens */
-    justify-content: center; /* Center buttons on small screens */
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
     flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
     .summary-footer-actions {
-        width: auto; /* Allow buttons to size themselves */
-        justify-content: flex-end; /* Align to end on larger screens */
-        flex-basis: 30%; /* Give buttons some dedicated space */
+        width: auto;
+        justify-content: flex-end;
+        flex-basis: 30%;
     }
 }
 
@@ -126,25 +117,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 100px; /* Ensure buttons have a minimum width */
+    min-width: 100px;
 }
 
 .back-button {
-    background-color: #4a5568; /* gray-700 */
+    background-color: #4a5568;
     color: #fff;
 }
 
 .back-button:hover {
-    background-color: #6366f1; /* indigo-500 */
+    background-color: #6366f1;
 }
 
 .continue-button {
-    background-image: linear-gradient(to right, #2563eb, #1d4ed8); /* blue-600 to blue-700 */
+    background-image: linear-gradient(to right, #2563eb, #1d4ed8);
     color: #fff;
 }
 
 .continue-button:hover {
-    background-image: linear-gradient(to right, #3b82f6, #2563eb); /* blue-500 to blue-600 */
+    background-image: linear-gradient(to right, #3b82f6, #2563eb);
 }
 
 .summary-button:active {
