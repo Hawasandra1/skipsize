@@ -1,0 +1,158 @@
+/* src/components/SummaryFooter.css */
+
+.summary-footer {
+    position: fixed;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 100%;
+    background-color: #1a202c; /* Dark background, similar to your theme */
+    color: #fff;
+    padding: 1rem 1.5rem; /* Adjust padding as needed */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); /* Shadow on top */
+    z-index: 900; /* Below modals, above main content */
+    transform: translateY(100%); /* Start off-screen below */
+    transition: transform 0.5s ease-out; /* Smooth slide-in/out */
+    border-top: 1px solid #4a5568; /* Subtle top border for definition */
+}
+
+.summary-footer.show {
+    transform: translateY(0); /* Slide into view */
+}
+
+.summary-footer-content {
+    max-width: 1200px; /* Max width for content, center it */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Default stack on small screens */
+    align-items: center; /* Center items when stacked */
+    gap: 1.5rem; /* Space between sections when stacked */
+}
+
+@media (min-width: 768px) { /* Medium screens and up (tablet/desktop) */
+    .summary-footer-content {
+        flex-direction: row; /* Row layout on larger screens */
+        justify-content: space-between; /* Distribute items */
+        align-items: center; /* Vertically align items */
+        gap: 1rem; /* Adjust gap for row layout */
+    }
+}
+
+/* Disclaimer Text Styling */
+.footer-disclaimer {
+    color: #a0aec0; /* Lighter grey for disclaimer text */
+    font-size: 0.75rem; /* Smaller font size */
+    text-align: center; /* Center text on small screens */
+    flex-shrink: 0; /* Don't allow it to shrink too much */
+    max-width: 400px; /* Limit width of disclaimer */
+}
+
+@media (min-width: 768px) {
+    .footer-disclaimer {
+        text-align: left; /* Align left on larger screens */
+        flex-basis: 40%; /* Give it more space on the left */
+        max-width: none; /* Remove max-width on larger screens */
+    }
+}
+
+/* Selected Skip Info Styling */
+.skip-summary-info {
+    display: flex;
+    flex-direction: column; /* Stack name and (price + hire) vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .skip-summary-info {
+        /* On larger screens, this will remain column to keep the two lines */
+        flex-direction: column;
+        align-items: flex-start; /* Align text left */
+        text-align: left;
+        gap: 0.2rem; /* Small gap between the two lines */
+        flex-basis: auto; /* Allow content to dictate size */
+    }
+}
+
+.selected-skip-name {
+    font-size: 1rem; /* Default font size for name */
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap; /* Keep name on one line */
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+.selected-skip-price-and-hire {
+    font-size: 0.875rem; /* Default for the combined line, then span overrides */
+    color: #9ca3af; /* Default color for this line, will be overridden by price span */
+    white-space: nowrap; /* Keep price and hire period on one line */
+    margin-top: 0; /* Remove default paragraph margin */
+}
+
+.selected-skip-price {
+    font-size: 1.25rem; /* Larger font for price */
+    font-weight: 700;
+    color: #fcd34d; /* Yellow color for price */
+    margin-right: 0.25rem; /* Small space between price and hire period */
+}
+
+/* No specific .selected-skip-hire-period style needed if it's within .selected-skip-price-and-hire and inherits/is fine */
+
+
+/* Actions (Buttons) Styling */
+.summary-footer-actions {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+    width: 100%; /* Take full width on small screens */
+    justify-content: center; /* Center buttons on small screens */
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .summary-footer-actions {
+        width: auto; /* Allow buttons to size themselves */
+        justify-content: flex-end; /* Align to end on larger screens */
+        flex-basis: 30%; /* Give buttons some dedicated space */
+    }
+}
+
+.summary-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px; /* Ensure buttons have a minimum width */
+}
+
+.back-button {
+    background-color: #4a5568; /* gray-700 */
+    color: #fff;
+}
+
+.back-button:hover {
+    background-color: #6366f1; /* indigo-500 */
+}
+
+.continue-button {
+    background-image: linear-gradient(to right, #2563eb, #1d4ed8); /* blue-600 to blue-700 */
+    color: #fff;
+}
+
+.continue-button:hover {
+    background-image: linear-gradient(to right, #3b82f6, #2563eb); /* blue-500 to blue-600 */
+}
+
+.summary-button:active {
+    transform: scale(0.98);
+}
+
+.summary-button .button-arrow-icon {
+    margin-left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+}
