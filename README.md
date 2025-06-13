@@ -1,6 +1,6 @@
 ## skipsize
 
-My approach to coding this redesign focused on breaking down the problem into manageable React components, handling data efficiently, and ensuring a great user experience across devices.
+My redesign focused on breaking down the problem into manageable React components, handling data efficiently, and ensuring a great user experience across devices.
 
 ### 1. Project Setup and Component Structure
 
