@@ -6,7 +6,7 @@ import SummaryFooter from './components/SummaryFooter';
 import './App.css'; 
 
 
-import { MapPin, Trash2, CheckCircle, Calendar, CreditCard, Shield } from 'lucide-react';
+import { MapPin, Trash2, Truck, Calendar, CreditCard, Shield } from 'lucide-react';
 
 function App() {
     const [skips, setSkips] = useState([]);
@@ -74,7 +74,7 @@ function App() {
     const progressSteps = [
         { name: 'Postcode', icon: MapPin },
         { name: 'Waste Type', icon: Trash2 },
-        { name: 'Select Skip', icon: CheckCircle },
+        { name: 'Select Skip', icon: Truck },
         { name: 'Permit Check', icon: Shield },
         { name: 'Choose Date', icon: Calendar },
         { name: 'Payment', icon: CreditCard },
