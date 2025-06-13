@@ -4,7 +4,7 @@ My redesign focused on breaking down the problem into manageable React component
 
 ### 1. Project Setup and Component Structure
 
-* Started with a standard React project setup (likely using Vite, given the initial screenshot, or Create React App).
+* Started with a standard React project.
 * **Decomposed the UI into components:**
     * `App.jsx`: Served as the main container. It manages the overall state (loading, errors, selected skip, fetched data) and orchestrates the rendering of other components.
     * `SkipCard.jsx`: A reusable component designed to display the details of a single skip (image, name, price, description) and handle its selection.
