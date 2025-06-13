@@ -1,6 +1,5 @@
 // src/components/create.jsx
 import React, { useState } from 'react';
-import './create.css';
 
 const Create = () => {
     const [formData, setFormData] = useState({
